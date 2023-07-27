@@ -1,5 +1,7 @@
 package com.example.official.demo1.batchprocessing;
 
+import java.util.Random;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,7 +17,7 @@ public class PersonItemProcessor implements ItemProcessor<Person, Person> {
         final String lastName = person.getLastName().toUpperCase();
 
         final Person transformedPerson = new Person(firstName, lastName);
-
+        
         log.info("Converting (" + person + ") into (" + transformedPerson + ")");
 
         return transformedPerson;

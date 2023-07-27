@@ -1,37 +1,52 @@
 package com.example.official.demo1.batchprocessing;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Person {
 
-  private String lastName;
-  private String firstName;
+    @Id
+    private String id;
 
-  public Person() {
-  }
+    private String lastName;
+    private String firstName;
 
-  public Person(String firstName, String lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-  }
+    public Person() {
+    }
 
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
-  }
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
-  public String getFirstName() {
-    return firstName;
-  }
+    public String getId() {
+        return id;
+    }
 
-  public String getLastName() {
-    return lastName;
-  }
+    public void setId(String id) {
+        this.id = id;
+    }
 
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
-  }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-  @Override
-  public String toString() {
-    return "firstName: " + firstName + ", lastName: " + lastName;
-  }
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    @Override
+    public String toString() {
+        return "firstName: " + firstName + ", lastName: " + lastName;
+    }
 
 }

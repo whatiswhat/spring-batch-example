@@ -14,8 +14,4 @@
 		INSERT INTO user (id, name, email) VALUES (#{id}, #{name}, #{email})
 	</insert>
 	
-	<insert id="insertDemo3B" parameterType="com.example.home.demo3.mybatis.User" statementType="PREPARED">
-		INSERT INTO user (id, name, email) VALUES (:id, :name, :email)
-	</insert>
-	
 </mapper>

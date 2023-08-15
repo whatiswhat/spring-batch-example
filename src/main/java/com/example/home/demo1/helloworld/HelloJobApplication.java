@@ -13,10 +13,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.transaction.PlatformTransactionManager;
 
 @SpringBootApplication
 @Configuration
+//@PropertySource(value = { "classpath:application.properties" })
 public class HelloJobApplication {
 
     @Bean
@@ -29,24 +31,15 @@ public class HelloJobApplication {
             }
         };
     }
-    
-//    @Bean
-//    public JdbcTransactionManager batchTransactionManager(DataSource dataSource) {
-//        return new JdbcTransactionManager(dataSource);
-//    }
 
     @Bean
     public Step helloStep(JobRepository jobRepository, PlatformTransactionManager transactionManager) {
-        return new StepBuilder("helloStep", jobRepository)
-                .tasklet(tasklet(), transactionManager)
-                .build();
+        return new StepBuilder("helloStep", jobRepository).tasklet(tasklet(), transactionManager).build();
     }
 
     @Bean
     public Job helloJob(JobRepository jobRepository, Step helloStep) {
-        return new JobBuilder("helloJob", jobRepository)
-                .start(helloStep)
-                .build();
+        return new JobBuilder("helloJob", jobRepository).start(helloStep).build();
     }
 
     public static void main(String[] args) {

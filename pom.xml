@@ -18,7 +18,7 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
-		
+
 		<!-- Spring Boot -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -41,7 +41,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>-->
-		
+
 		<!-- Spring Batch -->
 		<dependency>
 			<groupId>org.springframework.batch</groupId>
@@ -63,7 +63,7 @@
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-commons</artifactId>
 		</dependency> -->
-		
+
 		<!-- MySQL -->
 		<!-- <dependency>
 			<groupId>mysql</groupId>
@@ -93,6 +93,7 @@
 			<artifactId>mybatis-spring</artifactId>
 			<version>3.0.2</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>

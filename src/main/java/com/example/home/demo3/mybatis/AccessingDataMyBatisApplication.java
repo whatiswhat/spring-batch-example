@@ -8,7 +8,6 @@ public class AccessingDataMyBatisApplication {
 
     public static void main(String[] args) throws Exception {
         System.exit(SpringApplication.exit(SpringApplication.run(AccessingDataMyBatisApplication.class, args)));
-//        SpringApplication.run(AccessingDataMysqlApplication.class, args);
     }
 
 }
